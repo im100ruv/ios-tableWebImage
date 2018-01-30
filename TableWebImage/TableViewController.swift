@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  TableViewController.swift
 //  TableWebImage
 //
 //  Created by Im100ruv on 30/01/18.
@@ -8,44 +8,38 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    @IBOutlet weak var tableView: UITableView!
+class TableViewController: UITableViewController {
     
     var imageURLS = [String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tableView.dataSource = self
-        tableView.delegate = self
         imageURLS = ["https://images.pexels.com/photos/34950/pexels-photo.jpg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/235615/pexels-photo-235615.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/34950/pexels-photo.jpg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/235615/pexels-photo-235615.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/34950/pexels-photo.jpg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/235615/pexels-photo-235615.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/34950/pexels-photo.jpg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/235615/pexels-photo-235615.jpeg?h=350&auto=compress&cs=tinysrgb"]
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+        
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        // #warning Incomplete implementation, return the number of rows
         return imageURLS.count
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell") as! TableCell
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TblCtrlCell") as! TblCtrlCell
         
-        let imgURL = URL(string: imageURLS[indexPath.row])
-        do {
-            let imgData = try Data(contentsOf: imgURL!)
-            cell.imgView.image = UIImage(data: imgData)
-        } catch let err {
-            print(err.localizedDescription)
-        }
+        let targetImageView = cell.TblCtrlImageView
         
         return cell
     }
-    
+
 }
 
-class TableCell: UITableViewCell {
-    
-    @IBOutlet weak var imgView: UIImageView!
+class TblCtrlCell: UITableViewCell {
+    @IBOutlet weak var TblCtrlImageView: UIImageView!
 }
-
-
