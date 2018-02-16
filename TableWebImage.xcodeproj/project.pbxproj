@@ -13,10 +13,13 @@
 		C6E303DF20202CBA00758927 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6E303DD20202CBA00758927 /* Main.storyboard */; };
 		C6E303E120202CBA00758927 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6E303E020202CBA00758927 /* Assets.xcassets */; };
 		C6E303E420202CBA00758927 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C6E303E220202CBA00758927 /* LaunchScreen.storyboard */; };
+		CA6802D71A3C406E8EA7245E /* Pods_TableWebImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F6C89DD0686F2DB2A6FA88DC /* Pods_TableWebImage.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A5CA6991FB132C26D465DEFC /* Pods-TableWebImage.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableWebImage.release.xcconfig"; path = "Pods/Target Support Files/Pods-TableWebImage/Pods-TableWebImage.release.xcconfig"; sourceTree = "<group>"; };
 		C664D6E320208B7100B46B61 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		C664D6E52020BD9500B46B61 /* TableWebImage-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TableWebImage-Bridging-Header.h"; sourceTree = "<group>"; };
 		C6E303D620202CBA00758927 /* TableWebImage.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableWebImage.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6E303D920202CBA00758927 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C6E303DB20202CBA00758927 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +27,8 @@
 		C6E303E020202CBA00758927 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C6E303E320202CBA00758927 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C6E303E520202CBA00758927 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CE68E37D208E2BCB4D1399A7 /* Pods-TableWebImage.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TableWebImage.debug.xcconfig"; path = "Pods/Target Support Files/Pods-TableWebImage/Pods-TableWebImage.debug.xcconfig"; sourceTree = "<group>"; };
+		F6C89DD0686F2DB2A6FA88DC /* Pods_TableWebImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TableWebImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +36,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA6802D71A3C406E8EA7245E /* Pods_TableWebImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		374847C7CC0FDDD256AA1B2B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F6C89DD0686F2DB2A6FA88DC /* Pods_TableWebImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		C6E303CD20202CBA00758927 = {
 			isa = PBXGroup;
 			children = (
 				C6E303D820202CBA00758927 /* TableWebImage */,
 				C6E303D720202CBA00758927 /* Products */,
+				F6C200169D08AE082DCE12E3 /* Pods */,
+				374847C7CC0FDDD256AA1B2B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -63,8 +79,18 @@
 				C6E303E020202CBA00758927 /* Assets.xcassets */,
 				C6E303E220202CBA00758927 /* LaunchScreen.storyboard */,
 				C6E303E520202CBA00758927 /* Info.plist */,
+				C664D6E52020BD9500B46B61 /* TableWebImage-Bridging-Header.h */,
 			);
 			path = TableWebImage;
+			sourceTree = "<group>";
+		};
+		F6C200169D08AE082DCE12E3 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				CE68E37D208E2BCB4D1399A7 /* Pods-TableWebImage.debug.xcconfig */,
+				A5CA6991FB132C26D465DEFC /* Pods-TableWebImage.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,9 +100,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C6E303E820202CBA00758927 /* Build configuration list for PBXNativeTarget "TableWebImage" */;
 			buildPhases = (
+				158F9F22665624286033A040 /* [CP] Check Pods Manifest.lock */,
 				C6E303D220202CBA00758927 /* Sources */,
 				C6E303D320202CBA00758927 /* Frameworks */,
 				C6E303D420202CBA00758927 /* Resources */,
+				78434278388B685FF6EB2CF9 /* [CP] Embed Pods Frameworks */,
+				C32030A53011E1B6634F9362 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -99,6 +128,7 @@
 				TargetAttributes = {
 					C6E303D520202CBA00758927 = {
 						CreatedOnToolsVersion = 9.1;
+						LastSwiftMigration = 0910;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -133,6 +163,60 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		158F9F22665624286033A040 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TableWebImage-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		78434278388B685FF6EB2CF9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-TableWebImage/Pods-TableWebImage-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TableWebImage/Pods-TableWebImage-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C32030A53011E1B6634F9362 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-TableWebImage/Pods-TableWebImage-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		C6E303D220202CBA00758927 /* Sources */ = {
@@ -276,13 +360,19 @@
 		};
 		C6E303E920202CBA00758927 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CE68E37D208E2BCB4D1399A7 /* Pods-TableWebImage.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PC6ND5VTK9;
 				INFOPLIST_FILE = TableWebImage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.im100ruv.TableWebImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TableWebImage/TableWebImage-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -290,13 +380,18 @@
 		};
 		C6E303EA20202CBA00758927 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5CA6991FB132C26D465DEFC /* Pods-TableWebImage.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = PC6ND5VTK9;
 				INFOPLIST_FILE = TableWebImage/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.im100ruv.TableWebImage;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "TableWebImage/TableWebImage-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -1,0 +1,6 @@
+framework module Pods_TableWebImage {
+  umbrella header "Pods-TableWebImage-umbrella.h"
+
+  export *
+  module * { export * }
+}

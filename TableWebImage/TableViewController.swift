@@ -15,7 +15,7 @@ class TableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        imageURLS = ["https://images.pexels.com/photos/34950/pexels-photo.jpg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/235615/pexels-photo-235615.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/34950/pexels-photo.jpg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/235615/pexels-photo-235615.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/34950/pexels-photo.jpg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/235615/pexels-photo-235615.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/34950/pexels-photo.jpg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/39811/pexels-photo-39811.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/235615/pexels-photo-235615.jpeg?h=350&auto=compress&cs=tinysrgb"]
+        imageURLS = ["https://images.pexels.com/photos/248771/pexels-photo-248771.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/556416/pexels-photo-556416.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/39629/tiger-tiger-baby-tigerfamile-young-39629.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/103123/pexels-photo-103123.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/248771/pexels-photo-248771.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/556416/pexels-photo-556416.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/39629/tiger-tiger-baby-tigerfamile-young-39629.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/103123/pexels-photo-103123.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/248771/pexels-photo-248771.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/39629/tiger-tiger-baby-tigerfamile-young-39629.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/103123/pexels-photo-103123.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/248771/pexels-photo-248771.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/39629/tiger-tiger-baby-tigerfamile-young-39629.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/556416/pexels-photo-556416.jpeg?h=350&auto=compress&cs=tinysrgb", "https://images.pexels.com/photos/103123/pexels-photo-103123.jpeg?h=350&auto=compress&cs=tinysrgb"]
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -34,7 +34,9 @@ class TableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TblCtrlCell") as! TblCtrlCell
         
         let targetImageView = cell.TblCtrlImageView
-        
+        //let targetImageView = cell.viewWithTag(1) //as! UIImageView
+        targetImageView?.sd_setImage(with: URL(string: imageURLS[indexPath.row]), placeholderImage: #imageLiteral(resourceName: "pieces.jpg"), options: [.progressiveDownload])
+    
         return cell
     }
 
